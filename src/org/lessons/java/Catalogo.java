@@ -53,17 +53,23 @@ public class Catalogo {
 					loopExit = true;
 				} catch (EmptyFieldException e) {
 					System.out.println("Stop1!! " + e.getMessage());
+					System.out.println("Riprova...");
+					System.out.println();
 				} catch (PageNumberException e) {
 					System.out.println("Stop2!! " + e.getMessage());
-				} catch (Exception e) {
-					System.out.println("Stop3!! " + e.getMessage());
+					System.out.println("Riprova...");
+					System.out.println();
+				} catch (NumberFormatException e) {
+					System.out.println("Inserire un numero");
+					System.out.println("Riprova...");
+					System.out.println();
 				}
 			} while (!loopExit);
 		}
 		
 		// Stampa i libri
 		for (int i = 0; i < libri.length; i++) {
-			System.out.println(libri[i].toString());
+			System.out.println(libri[i]);
 			System.out.println();
 		}
 		
