@@ -5,13 +5,14 @@ public class Libro {
 	int pageNumber;
 	String author;
 	String editor;
-	
-	public Libro(String title, int pageNumber, String author, String editor) throws EmptyFieldException, PageNumberException {
+
+	public Libro(String title, int pageNumber, String author, String editor)
+			throws EmptyFieldException, PageNumberException {
 		this.validateEmptyField(title);
 		this.validatePageNumber(pageNumber);
 		this.validateEmptyField(author);
 		this.validateEmptyField(editor);
-		
+
 		this.pageNumber = pageNumber;
 		this.title = title;
 		this.author = author;
@@ -23,13 +24,13 @@ public class Libro {
 			throw new PageNumberException(pageNumber);
 		}
 	}
-	
+
 	public void validateEmptyField(String field) throws EmptyFieldException {
 		if (field.isEmpty()) {
 			throw new EmptyFieldException();
 		}
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
