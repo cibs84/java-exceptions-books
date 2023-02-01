@@ -6,8 +6,8 @@ public class Libro {
 	String author;
 	String editor;
 
-	public Libro(String title, int pageNumber, String author, String editor)
-			throws EmptyFieldException, PageNumberException {
+	public Libro(String title, int pageNumber, String author, String editor) throws Exception {
+		// throws EmptyFieldException, PageNumberException {
 		this.validateEmptyField(title);
 		this.validatePageNumber(pageNumber);
 		this.validateEmptyField(author);
